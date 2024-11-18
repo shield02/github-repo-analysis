@@ -1,0 +1,16 @@
+Docker
+So we will dockerize this application
+
+# Read up on
+1. docker
+2. containerization
+3. docker-compose
+
+# Setting up the project
+Add license
+Add .gitignore
+Add requirements.txt
+Add .dockerignore
+Add .env - this file is used to manage or store secret used in the application
+Add .env.example
+Create a virtual environment for the start
