@@ -15,3 +15,56 @@ Add .dockerignore
 Add .env - this file is used to manage or store secret used in the application
 Add .env.example
 Create a virtual environment for the start
+
+Create a project folder
+Add all the setup files, like .gitignore, README, License requirements.txt
+Create a virtual environment and install all the necessary packages
+
+# Now let us tackle the problem statement
+You will ask yourself what features will this project have
+    - user object
+    - authentication (ability to sign up or sign in) username/email and password or biometrics
+    - authorization (privilege to perform certain operations) e.g, can you delete a user account
+    - need an api
+    - will i have to register on an external platform
+
+    - will you need a database if yes
+        - will you need a table (table schema)
+        - how many
+        N/B: tables are represent or called models in applications
+    - will you need a frontend, or it will only be a backend that defines apis only
+    - if it is only backend api only, how will I access the api to test that it is working as expected (this is
+        different from testing the application using Pytest or Unittest'. Here you will need to use an app called
+        postman to access the apis
+    - Which Python framework will be suitable for a project like this. E.g FastAPI, Django, Flask
+    - Which test library will I use for the project, e.g. pytest, unittest, snail
+    - How many API endpoints or routes will I need. Here think about if I am to have a frontend, the frontend
+        will need a way to access the data I have stored in the database or data structure. So how many routes
+        will I need to define.
+        What will guide here will be
+            How many model entities does the application have eg. user, students, classes, books
+
+# Things to research on
+What is a url.
+Parts of a url
+What are the libraries in Python that I can use to work with a URL.
+What is the difference between a URL and an API
+
+# URL
+https://github.com/shield02/repositories
+
+# API
+https://twitter.com/api/v1/users
+
+programmatically accessing a url
+
+# Command line commands you can use to access a web url
+curl -p
+wget
+httpie
+
+# What data structure will I use to store the repositories that I will get from the URL
+
+I want to create an application that takes a github url and finds all the repositories
+using python. please recommend a framework and how I can approach the problem. Will I need
+a database. Will I need a model, how many will I need.
