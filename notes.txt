@@ -23,20 +23,37 @@ Create a virtual environment and install all the necessary packages
 # Now let us tackle the problem statement
 You will ask yourself what features will this project have
     - user object
+        needed if we will to store user info
+        for authentication
+        will need to store user information
+        can be represented as a class
     - authentication (ability to sign up or sign in) username/email and password or biometrics
+        checking the credentials 
     - authorization (privilege to perform certain operations) e.g, can you delete a user account
+        actions a user is allowed to perform
+        oauth - user can login to access their private repo
     - need an api
+        if we will need an api, what will it be used for?
     - will i have to register on an external platform
+        yes
 
     - will you need a database if yes
-        - will you need a table (table schema)
+        - will you need a table (table schema) [sqlite]
         - how many
         N/B: tables are represent or called models in applications
     - will you need a frontend, or it will only be a backend that defines apis only
-    - if it is only backend api only, how will I access the api to test that it is working as expected (this is
+    - if it is only backend api only, how will I access the api to test that it is working as expected this is
         different from testing the application using Pytest or Unittest'. Here you will need to use an app called
         postman to access the apis
     - Which Python framework will be suitable for a project like this. E.g FastAPI, Django, Flask
+        main.py
+        core/ - contains core logic like app config and security settings
+        db/ - manages db connections, models and CRUD operations
+        api/routes/ - defines api endpoints grouped functionality
+        schemas/ - defines pydantic models for data validation and serialization
+        test/ - pytest
+        .env - store sensitive information like API or secret keys, database url
+        requirements.txt
     - Which test library will I use for the project, e.g. pytest, unittest, snail
     - How many API endpoints or routes will I need. Here think about if I am to have a frontend, the frontend
         will need a way to access the data I have stored in the database or data structure. So how many routes
