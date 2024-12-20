@@ -85,3 +85,14 @@ httpie
 I want to create an application that takes a github url and finds all the repositories
 using python. please recommend a framework and how I can approach the problem. Will I need
 a database. Will I need a model, how many will I need.
+
+
+STEPS ON HOW TO PROCEED ON THE PROJECT
+1. Define criteria for complexity
+    - Define complexity metrics. Could be based on code length, dependencies, language used
+        or even more challenging patterns like custom algorithms.
+    - Use GPT prompts to compare repos and rank complexity according to these metrics.
+2. GitHub API Interactions
+    - Use the GitHub API to fetch repositories from a user's profile.
+    - Collect metadata like programming languages, repository size, commit history, number of contributors
+3. Repository analysis pipeline
