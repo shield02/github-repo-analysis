@@ -1,15 +1,12 @@
-import pytest
-from app.utils.github_api import GitHubApi
+from fastapi.testclient import TestClient
+from app.main import app
 
-MOCK_REPOSITORY = {"name": "test-repo", "description": "A test repository"}
+client = TestClient(app)
 
-def test_fetch_user_reposritories_using_user_profile(mocker):
-    """Test fetching a user repository with a valid response."""
-    mocker.patch(
-        "app.services.github_service.request.get",
-        result = mocker.Mock(status_code=200, json=lambda: [MOCK_REPOSITORY])
-    )
+user_url = "https://github.com/username"
 
-    repos = GitHubApi.fetch_repositories("https://github.com/username")
-    assert len(repos) > 0
-    assert repos[0]["name"] == MOCK_REPOSITORY["name"]
+def test_url_is_valid():
+    response = client.post("/analyze", json={"github_user_url": user_url})
+    assert response.status_code == 200
+    data = response.json()
+    assert isinstance(data["test_repo"], dict)
